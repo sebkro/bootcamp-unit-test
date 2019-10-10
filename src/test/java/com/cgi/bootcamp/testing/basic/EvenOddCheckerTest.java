@@ -6,10 +6,10 @@ import org.springframework.util.StringUtils;
 
 public class EvenOddCheckerTest {
 	
+	private EvenOddChecker checker = new EvenOddChecker();
+	
 	@Test
 	public void isEvenShouldReturnTrueForZero() {
-		EvenOddChecker checker = new EvenOddChecker();
-		
 		//when
 		boolean result = checker.isEven(0);
 		
@@ -19,20 +19,37 @@ public class EvenOddCheckerTest {
 	
 	@Test
 	public void isEvenShouldReturnFalseForOne() {
-		EvenOddChecker checker = new EvenOddChecker();
-		
 		//when
 		boolean result = checker.isEven(1);
 		
 		//then
-		// TODO implement assertion
+		Assert.assertFalse(result);
 	}
 
 	@Test
 	public void isEvenShouldReturnTrueForTwo() {
-		//TODO implement me
+		//when
+		boolean result = checker.isEven(2);
+		
+		//then
+		Assert.assertTrue(result);
 	}
 	
-	// TODO: implement some testcases for isOdd
+	@Test
+	public void isOddShouldReturnTrueForOne() {
+		//when
+		boolean result = checker.isOdd(1);
+		
+		//then
+		Assert.assertTrue(result);
+	}
 
+	@Test
+	public void isOddShouldReturnFalseForTwo() {
+		//when
+		boolean result = checker.isOdd(2);
+		
+		//then
+		Assert.assertFalse(result);
+	}
 }

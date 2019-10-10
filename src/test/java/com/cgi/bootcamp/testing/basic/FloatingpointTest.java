@@ -11,9 +11,7 @@ public class FloatingpointTest {
 		double result = (0.01 * 100) / 100;
 		
 		//then
-		
-		// TODO Fix me!!
-		Assert.assertEquals(result, 0.01);
+		Assert.assertEquals(result, 0.01, 0.001);
 	}
 
 }

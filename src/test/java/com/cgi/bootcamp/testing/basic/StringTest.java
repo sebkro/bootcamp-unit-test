@@ -11,12 +11,25 @@ public class StringTest {
 		String result = "abcd".toUpperCase();
 		
 		//then
-		//TODO: Fix test
-		Assert.assertEquals("ABCd", result);
+		Assert.assertEquals("ABCD", result);
+	}
+
+	@Test
+	public void itShouldConvertStringWithUpperCaseLettersToUppercase() {
+		//when
+		String result = "abCd".toUpperCase();
+		
+		//then
+		Assert.assertEquals("ABCD", result);
+	}
+
+	@Test
+	public void itShouldConvertUppercaseStringToUppercase() {
+		//when
+		String result = "ABCD".toUpperCase();
+		
+		//then
+		Assert.assertEquals("ABCD", result);
 	}
 	
-	
-	// TODO: Test 2 : Pruefe das "abCd".toUpperCase() "ABCD" ergibt 
-	// TODO: Test 3 : Pruefe das "ABCD".toUpperCase() "ABCD" ergibt 
-
 }
