@@ -4,7 +4,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MessangeSenderTest {
+public class MessageSenderTest {
 	
 	private MessageSender sender = new MessageSender();
 	
