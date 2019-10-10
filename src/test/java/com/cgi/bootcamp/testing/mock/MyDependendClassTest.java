@@ -1,5 +1,6 @@
 package com.cgi.bootcamp.testing.mock;
 
+import static org.mockito.Mockito.when;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;
@@ -25,7 +26,7 @@ public class MyDependendClassTest {
 	public void itShouldReturnEvenForEvenNumberWithMock() {
 		//given
 		EvenOddChecker checker = Mockito.mock(EvenOddChecker.class);
-		Mockito.when(checker.isEven(2)).thenReturn(true);
+		when(checker.isEven(2)).thenReturn(true);
 		
 		MyDependendClass sut = new MyDependendClass(checker);
 		
@@ -39,7 +40,9 @@ public class MyDependendClassTest {
 	@Test
 	public void itShouldReturnOddForOddNumberWithMock() {
 		//given
-		// TODO: Do the mocking 
+		EvenOddChecker checker = Mockito.mock(EvenOddChecker.class);
+		when(checker.isEven(1)).thenReturn(false);
+		MyDependendClass sut = new MyDependendClass(checker);
 		
 		//when
 		String result = sut.produce(1);
